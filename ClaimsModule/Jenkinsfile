@@ -4,14 +4,17 @@ node {
 	}
 	stage('Install'){
 		def mvnHome = tool name: 'Maven 3.8', type: 'maven'
+		bat "cd ClaimsModule"
 		bat "${mvnHome}/bin/mvn -DskipTests clean install"
 	}
 	stage('Test'){
 		def mvnHome = tool name: 'Maven 3.8', type: 'maven'
+		bat "cd ClaimsModule"
 		bat "${mvnHome}/bin/mvn test"
 	}
 	stage('Package'){
 		def mvnHome = tool name: 'Maven 3.8', type: 'maven'
+		bat "cd ClaimsModule"
 		bat "${mvnHome}/bin/mvn package"
 	}
 	
