@@ -71,7 +71,7 @@ public class ClaimTest {
 	@Test
 	public void testgetClaim()
 	{
-		Claim cl=new Claim((long)1,"notsettled",new java.util.Date(1999-12-23),"it is verified",(long)12345,(long)12346,"Apollo","2000 for 4years",600000);
+		Claim cl=new Claim((long)1,"settled",new java.util.Date(1999-12-23),"it is verified",(long)12345,(long)12346,"Apollo","2000 for 4years",600000);
 		assertEquals("settled",cl.getClaimstatus());
 		assertEquals("it is not verified",cl.getRemarks());
 		assertEquals("2000 for 4years",cl.getClaimedbenefit());

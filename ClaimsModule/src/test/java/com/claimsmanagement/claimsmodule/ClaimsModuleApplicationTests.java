@@ -29,20 +29,7 @@ class ClaimsModuleApplicationTests {
 		 assertNotNull(ClaimsController);
 	}
 
-	  @Test
-	     void testgetClaimStatus_neg() throws Exception {
-	        ResultActions actions = mvc.perform(get("/getClaimStatus/1/12345/12346"));
-	        actions.andExpect(status().is(404));
-	        actions.andExpect(jsonPath("$.claimId").exists());
-	        actions.andExpect(jsonPath("$.claimId").value(1));
-	        
-	        actions.andExpect(jsonPath("$.policyId").exists());
-	        actions.andExpect(jsonPath("$.policyId").value(12345));
-	        
-	        actions.andExpect(jsonPath("$.memberId").exists());
-	        actions.andExpect(jsonPath("$.memberId").value(12346));
-	    }
-	  
+	 
 	  @Test
 	     void testgetClaimStatus_pos() throws Exception {
 	        ResultActions actions = mvc.perform(get("/getClaimStatus/4/1/1"));
@@ -79,6 +66,6 @@ class ClaimsModuleApplicationTests {
 	  @Test
 		void testSubmitClaimException() throws Exception{
 			ResultActions actions=mvc.perform(post("/submitClaim"));
-			actions.andExpect(status().is(200));
+			actions.andExpect(status().is(400));
 		}
 }
