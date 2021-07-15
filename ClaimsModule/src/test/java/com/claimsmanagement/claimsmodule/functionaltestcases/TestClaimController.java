@@ -24,8 +24,6 @@ import com.claimsmanagement.claimsmodule.Utils.MasterData2;
 import com.claimsmanagement.claimsmodule.Utils.TestUtils;
 import com.claimsmanagement.claimsmodule.controller.Claimscontroller;
 import com.claimsmanagement.claimsmodule.service.*;
-import com.claimsmanagement.claimsmodule.dto.*;
-import com.claimsmanagement.claimsmodule.model.Claim;
 
 @ExtendWith(MockitoExtension.class)
 @RunWith(SpringRunner.class)
