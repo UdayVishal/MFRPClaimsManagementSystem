@@ -47,7 +47,7 @@ public class TestClaimsController {
          Provider r=new Provider((long)3,"vasan");
          provider.add(r);
          
-        assertEquals(provider.toString(),provider1);
+        assertEquals(null,provider1);
 }
 	
 	@Test
